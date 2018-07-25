@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <!-- Navbar content -->
+        <h3>
+            <a href="/" id="home-links">The Business World
+                <img src="/images/BW-logo.jpg" alt="Logo">
+            </a>
+        </h3>
+
+        <div class="other-links">
+            <a href="archives" id="pages-links">Archives</a>
+            <a href="contactUs" id="pages-links">ContactUS</a>
+        </div>
+
+
+        <a href="#" class="btn btn-primary btn-sm active logIn" role="button" aria-pressed="true">
+            <img src="/images/LogIn-icon.svg" width="10%" class="logIn-icon">
+
+            <p>LogIn</p>
+
+
+        </a>
+    </nav>
+
+    <div class="container">
+
+        <center>
+            <h1>
+                <%= title %>
+            </h1>
+            <h5>Welcome to
+            <%= title %></h5>
+           
+        </center>
+
+        <div class="jumbotron blogs-jumbotron">
+
+        </div>
+
+        <div class="row">
+
+                    <div class="col-lg-12">
+
+                        <div class="card blogs-card">
+
+                            <img class="card-img-top" src="<%= blogs.image %>" alt="Card image cap">
+
+                            <div class="card-body">
+
+                               
+                                <h5 class="card-title">
+                                    <%= blogs.title %>
+                                </h5>
+
+                                <p class="card-text">
+                                    <%- blogs.content2%>
+                                </p>
+                                <p class="card-text">Author:
+                                    <%- blogs.author %>
+                                </p>
+                               
+                                <p class="card-text">Time:
+                                    <%= blogs.time%>
+                                </p>
+                                <p class="card-text">Date:
+                                    <%= blogs.date%>
+                                </p>
+
+                                <a href="#" class="btn btn-primary delete-btn">Delete</a>
+
+                                <a href="/edit/<%= blogs.id %>" class="btn btn-primary edit ">edit</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+        </div>
+
+</div>
+
+
+
+
+
+
+
+    <script>
+
+        function CloseInput() {
+            document.getElementById('spoiler').style.display = 'none';
+        }
+
+        this.Edit = function (item) {
+            alert(item);
+        }
+
+    </script>
+</body>
+
+</html>

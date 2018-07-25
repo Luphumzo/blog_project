@@ -1,0 +1,111 @@
+body{
+    background-image: url(https://images.pexels.com/photos/429248/pexels-photo-429248.jpeg?auto=compress&cs=tinysrgb&h=350);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    #home-links{
+        color: whitesmoke;
+        cursor: pointer;
+        &:hover{
+        color: whitesmoke;
+        text-decoration: none;            
+        }
+    }
+    img{
+        width: 6%;
+        margin-left: 10px;
+    }
+
+    .other-links{
+        position: relative;
+        right: 30%;
+        padding: 0% !important ;
+    }
+
+    #pages-links{
+   color:#c97b12 !important;  
+   font-size: 20px !important;   
+    margin-left: 6px;
+   
+
+      &:hover{
+        color: whitesmoke !important;
+        text-decoration: none;            
+        }
+    }
+}
+
+.logIn{
+   width: 7%;
+   line-height: 2px !important;
+   background-color:#c97b12 !important; 
+   padding: 0% !important ;
+   position: absolute;
+   left: 90%;
+
+    img{
+    position: relative;
+    right: 45%;
+    top: 10px;
+    width: 17px;
+    }
+}
+
+.jumbotron{
+    background-image: url(../images/b-world.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+}
+
+.card{
+   background-color: #ffa429 !important;
+}
+.btn{
+    border: 0px;
+}
+h1 ,h5{
+    color: #ffa429 !important;
+}
+///////////////// New Posts /////////////////////
+
+
+
+
+/////// Edit Posts //////
+
+
+
+///// archives page ///
+.archives-jumbotron{
+ background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRENQ5eaQWXn0ANVRpfCeJsWnFjEs0TA8fLs35yQVDcvr3A_PYE");
+}
+
+.archives-card{
+   background-color: #1ab4ef !important;
+}
+
+
+///// archives page ///
+.blogs-jumbotron{
+ background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXqGI_4QDAYNE-JEI549HvFkVy4cALn4wJ2SuzJ-IpKH24ZwxGoA");
+}
+.blogs-card{
+    width: 100% !important;
+   background-color: #343a40 !important;
+   color: whitesmoke;
+    
+   .delete-btn{
+    background-color: red;
+    border: 0px;
+
+        &:hover{
+            background-color:orangered;
+            border: 6px red;
+        }
+   }
+}

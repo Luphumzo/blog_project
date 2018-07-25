@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Summernote</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+    <link href="http://cdnjs.gcloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+</head>
+
+<body>
+
+
+
+    <div class="container">
+
+        <nav class="navbar navbar-dark bg-dark">
+            <!-- Navbar content -->
+
+            <h3>
+                <a href="/" id="home-links">The Business World</a>
+            </h3>
+
+            <a href="#" class="btn btn-primary btn-sm active logIn" role="button" aria-pressed="true">
+                <img src="/images/LogIn-icon.svg" width="10%" class="logIn-icon">
+                <p>LogIn</p>
+            </a>
+        </nav>
+        <center>
+            <h1>
+                <%= title %>
+            </h1>
+            <h5>Welcome to
+                <%= title %>
+            </h5>
+
+        </center>
+
+        <div class="row">
+
+            <div class="col-xs-12 col-md-6 col-lg-4">
+
+                <form  method="POST">
+
+                    <p> Author:
+                        <input type="text" name="author" value="<%=blogs.author%>">
+                    </p>
+                    <br>
+                    <p> Date:
+                        <input type="date" name="date" value="
+                        <%=blogs.date%>">
+                    </p>
+                    <br>
+                    <p>Time:
+                        <input type="time" name="time" value="<%=blogs.time%>">
+                    </p>
+                    <br>
+
+                    <textarea id="summernote" name="content" >
+                         
+                        <%=blogs.content%>
+                    </textarea>
+
+                    <button type="submit" class="btn"> 
+                        submit
+                    </button>
+                    <!-- <a  class="btn btn-primary" type="submit" >update</a> -->
+                 
+
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Hello bootstrap 4',
+            tabsize: 4,
+            height: 300,
+            width: 600
+        })
+
+    </script>
+</body>
+
+</html>

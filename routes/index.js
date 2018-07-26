@@ -98,4 +98,14 @@ router.post('/edit/:id', function(req, res, next) {
 
 });
 
+/////////////////////DELETE//////
+router.get('/delete/:id', function (req, res, next) {
+  request({
+    url: "http://localhost:8000/posts/" + req.params.id,
+    method: "Delete",
+  },function(error , response , body){
+    res.redirect("/archives");
+  });
+});
+
 module.exports = router;

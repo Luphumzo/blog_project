@@ -1,12 +1,18 @@
 body{
-    background-image: url(https://images.pexels.com/photos/429248/pexels-photo-429248.jpeg?auto=compress&cs=tinysrgb&h=350);
+    background-image: url(../images/marc-kleen-641771-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .navbar{
     padding: 0% !important;
+    position: fixed !important;
+    width: 100%;
+    top: 0%;
+
+    z-index: 1;
 
     #home-links{
         color: whitesmoke;
@@ -80,7 +86,6 @@ h1 ,h5{
 
 
 /////// Edit Posts //////
-
 
 
 ///// archives page ///

@@ -47,7 +47,7 @@
            
         </center>
 
-        <div class="jumbotron blogs-jumbotron">
+        <div class="jumbotron posts-jumbotron">
 
         </div>
 
@@ -57,32 +57,32 @@
 
                         <div class="card blogs-card">
 
-                            <img class="card-img-top" src="<%= blogs.image %>" alt="Card image cap">
+                            <img class="card-img-top" src="<%= posts.image %>" alt="Card image cap">
 
                             <div class="card-body">
 
                                
                                 <h5 class="card-title">
-                                    <%= blogs.title %>
+                                    <%= posts.title %>
                                 </h5>
 
                                 <p class="card-text">
-                                    <%- blogs.content2%>
+                                    <%=posts.content%>
                                 </p>
                                 <p class="card-text">Author:
-                                    <%- blogs.author %>
+                                    <%-posts.author%>
                                 </p>
                                
                                 <p class="card-text">Time:
-                                    <%= blogs.time%>
+                                    <%= posts.time%>
                                 </p>
                                 <p class="card-text">Date:
-                                    <%= blogs.date%>
+                                    <%= posts.date%>
                                 </p>
 
                                 <a href="#" class="btn btn-primary delete-btn">Delete</a>
 
-                                <a href="/edit/<%= blogs.id %>" class="btn btn-primary edit ">edit</a>
+                                <a href="/edit/<%= posts.id %>" class="btn btn-primary edit ">edit</a>
 
                             </div>
 

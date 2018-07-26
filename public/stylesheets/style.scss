@@ -6,9 +6,12 @@ body{
 }
 
 .navbar{
+    padding: 0% !important;
+
     #home-links{
         color: whitesmoke;
         cursor: pointer;
+
         &:hover{
         color: whitesmoke;
         text-decoration: none;            

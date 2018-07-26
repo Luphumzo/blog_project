@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var posts = require('../db.json');
-var blogs = require('../db.json');
 var request = require("request");
 
 // can import code directly from file
@@ -17,7 +16,7 @@ router.get('/', function(req, res, next) {
 router.get('/new', function (req, res, next) {
   res.render('new', { title: 'New Article', posts: posts.posts});
 });
-module.exports = router;
+
 
 /* GET New blog page. */
 
@@ -41,7 +40,7 @@ router.post('/new', function (req, res, next) {
     body:obj,
     json:true
   },function(error,responsive,body){
-   
+  //  res.redirect('/')
   });
 
 });
@@ -63,17 +62,17 @@ router.get('/archives', function (req, res, next) {
 router.get('/full-blog/:id', function (req, res, next) {
 
   var id = req.params.id;
-  var data = blogs.blogs[id-1];
-  console.log(data);
-  res.render('full-blog', { title: 'The Blogs', blogs: data });
+  var data = posts.posts[id-1];
+  // console.log(data);
+  res.render('full-blog', { title: 'The Blogs', posts: data });
 
 });
 
 /* GET edit page */
 router.get('/edit/:id', function (req, res, next) {
   var id = req.params.id;
-  var data = blogs.blogs[id-1];
-  res.render('edit', { title: 'The Blogs', blogs: data });
+  var data = posts.posts[id-1];
+  res.render('edit', { title: 'The Blogs', posts: data });
 });
 
 ///// update//
@@ -83,7 +82,7 @@ router.post('/edit/:id', function(req, res, next) {
 
   //write logic that saves this data
   request({
-    url: "http://localhost:8000/blogs/" + req.params.id ,
+    url: "http://localhost:8000/posts/" + req.params.id ,
     method: "PATCH",
      form: {
       "title": req.body.title,
@@ -94,7 +93,9 @@ router.post('/edit/:id', function(req, res, next) {
       "content": req.body.content,
     }
   }, function (error, response, body) {
-    res.redirect('/');
+    res.redirect('/full-blog/' + req.params.id );
   });
 
 });
+
+module.exports = router;

@@ -4,26 +4,28 @@ body {
   background-size: cover;
   background-position: center; }
 
-.navbar #home-links {
-  color: whitesmoke;
-  cursor: pointer; }
-  .navbar #home-links:hover {
-    color: whitesmoke;
-    text-decoration: none; }
-.navbar img {
-  width: 6%;
-  margin-left: 10px; }
-.navbar .other-links {
-  position: relative;
-  right: 30%;
+.navbar {
   padding: 0% !important; }
-.navbar #pages-links {
-  color: #c97b12 !important;
-  font-size: 20px !important;
-  margin-left: 6px; }
-  .navbar #pages-links:hover {
-    color: whitesmoke !important;
-    text-decoration: none; }
+  .navbar #home-links {
+    color: whitesmoke;
+    cursor: pointer; }
+    .navbar #home-links:hover {
+      color: whitesmoke;
+      text-decoration: none; }
+  .navbar img {
+    width: 6%;
+    margin-left: 10px; }
+  .navbar .other-links {
+    position: relative;
+    right: 30%;
+    padding: 0% !important; }
+  .navbar #pages-links {
+    color: #c97b12 !important;
+    font-size: 20px !important;
+    margin-left: 6px; }
+    .navbar #pages-links:hover {
+      color: whitesmoke !important;
+      text-decoration: none; }
 
 .logIn {
   width: 7%;

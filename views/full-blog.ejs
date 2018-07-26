@@ -40,7 +40,7 @@
 
         <center>
             <h1>
-                <%= title %>
+                <%=title %>
             </h1>
             <h5>Welcome to
             <%= title %></h5>
@@ -57,7 +57,7 @@
 
                         <div class="card blogs-card">
 
-                            <img class="card-img-top" src="<%= posts.image %>" alt="Card image cap">
+                            <img class="card-img-top" src="<%=posts.image %>" alt="Card image cap">
 
                             <div class="card-body">
 
@@ -70,7 +70,7 @@
                                     <%=posts.content%>
                                 </p>
                                 <p class="card-text">Author:
-                                    <%-posts.author%>
+                                    <%=posts.author%>
                                 </p>
                                
                                 <p class="card-text">Time:

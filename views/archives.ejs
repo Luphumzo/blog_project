@@ -17,7 +17,7 @@
         <!-- Navbar content -->
         <h3>
             <a href="/" id="home-links">The Business World
-                <img src="images/BW-logo.jpg" alt="Logo">
+                <img src="/images/BW-logo.jpg" alt="Logo">
             </a>
         </h3>
         
@@ -28,7 +28,7 @@
         </div>
 
         <a href="#" class="btn btn-primary btn-sm active logIn" role="button" aria-pressed="true">
-            <img src="images/LogIn-icon.svg" width="10%" class="logIn-icon">
+            <img src="/images/LogIn-icon.svg" width="10%" class="logIn-icon">
             <p>LogIn</p>
         </a>
     </nav>
@@ -47,7 +47,7 @@
         <div class="jumbotron archives-jumbotron"></div>
 
         <div class="row">
-            <% if (posts !=0) { %>
+            <% if (posts) { %>
 
 
                 <% posts.forEach(function(post){ %>
@@ -56,7 +56,7 @@
 
                         <div class="card archives-card">
 
-                            <img class="card-img-top" src="<%= post.image %>" alt="Card image cap">
+                            <img class="card-img-top" src="<%=post.image%>" alt="Card image cap">
 
                             <div class="card-body">
 
@@ -65,18 +65,23 @@
                                 </h5>
 
                                 <p class="card-text">
-                                    <%- post.summary%>
-                                </p>
-                                <p class="card-text">
-                                    <%= post.time%>
-                                </p>
-                                <p class="card-text">
-                                    <%= post.date%>
+                                    <%-post.summary%>
                                 </p>
 
-                                <a href="" class="btn btn-primary">Delete</a>
+                                <p class="card-text">
+                                    <%=posts.author%>
+                                </p>
 
-                                <a href="new" class="btn btn-primary edit">edit</a>
+                                <p class="card-text">
+                                    <%=post.time%>
+                                </p>
+                                <p class="card-text">
+                                    <%=post.date%>
+                                </p>
+
+                                <a href="/delete/<%= posts.id %>" class="btn btn-primary delete-btn">Delete</a>
+                                
+                                <a href="/edit/<%= posts.id %>" class="btn btn-primary edit ">edit</a>
 
                             </div>
 

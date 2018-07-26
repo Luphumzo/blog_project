@@ -58,12 +58,17 @@ router.get('/archives', function (req, res, next) {
   res.render('archives', { title: 'New Article', posts: posts.posts });
 });
 
+
+/* GET Archives page */
+router.get('/full-blog/archives', function (req, res, next) {
+  res.render('archives', { title: 'New Article', posts: posts.posts });
+});
 /* Full-blog page. */
 router.get('/full-blog/:id', function (req, res, next) {
 
   var id = req.params.id;
   var data = posts.posts[id-1];
-  // console.log(data);
+
   res.render('full-blog', { title: 'The Blogs', posts: data });
 
 });
@@ -75,12 +80,18 @@ router.get('/edit/:id', function (req, res, next) {
   res.render('edit', { title: 'The Blogs', posts: data });
 });
 
+/* GET edit from archives page */
+router.get('/full-blog/archives/edit:id', function (req, res, next) {
+  var id = req.params.id;
+  var data = posts.posts[id - 1];
+  res.render('edit', { title: 'The Blogs', posts: data });
+});
+
 ///// update//
 
 router.post('/edit/:id', function(req, res, next) {
   // res.send(req.body)
 
-  //write logic that saves this data
   request({
     url: "http://localhost:8000/posts/" + req.params.id ,
     method: "PATCH",

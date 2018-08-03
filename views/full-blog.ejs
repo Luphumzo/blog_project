@@ -42,8 +42,8 @@
             <h1>
                 <%=title %>
             </h1>
-            <h5>Welcome to
-            <%= title %></h5>
+            <h4>Welcome to
+            <%= title %></h4>
            
         </center>
 
@@ -57,13 +57,13 @@
 
                         <div class="card blogs-card">
 
-                            <img class="card-img-top" src="<%=posts.image %>" alt="Card image cap">
+                            <img class="card-img-top" src="<%=posts.image%>" alt="Card image cap">
 
                             <div class="card-body">
 
                                
                                 <h5 class="card-title">
-                                    <%= posts.title %>
+                                    <%= posts.title%>
                                 </h5>
 
                                 <p class="card-text">
@@ -80,9 +80,9 @@
                                     <%= posts.date%>
                                 </p>
 
-                                <a href="/delete/<%= posts.id %>" class="btn btn-primary delete-btn">Delete</a>
+                                <a href="/delete/<%=posts.id %>" class="btn btn-primary delete-btn">Delete</a>
 
-                                <a href="/edit/<%= posts.id %>" class="btn btn-primary edit ">edit</a>
+                                <a href="/edit/<%=posts.id %>" class="btn btn-primary edit ">edit</a>
 
                             </div>
 

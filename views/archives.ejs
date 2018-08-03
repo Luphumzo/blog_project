@@ -39,9 +39,9 @@
             <h1>
                 <%= title %>
             </h1>
-            <h5>Welcome to
+            <h4>Welcome to
                 <%= title %>
-            </h5>
+            </h4>
         </center>
 
         <div class="jumbotron archives-jumbotron"></div>
@@ -79,9 +79,9 @@
                                     <%=post.date%>
                                 </p>
 
-                                <a href="/delete/<%= posts.id %>" class="btn btn-primary delete-btn">Delete</a>
+                                <a href="/delete/<%= post.id %>" class="btn btn-primary delete-btn">Delete</a>
                                 
-                                <a href="/edit/<%= posts.id %>" class="btn btn-primary edit ">edit</a>
+                                <a href="/edit/<%= post.id %>" class="btn btn-primary edit ">edit</a>
 
                             </div>
 
@@ -95,11 +95,6 @@
         </div>
 
     </div>
-
-
-
-
-
 
 
     <script>

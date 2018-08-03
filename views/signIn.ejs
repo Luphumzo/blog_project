@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- form links -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+ 
+
+    
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <h3>
+            <a href="/" id="home-links">The Business World
+                <img src="images/BW-logo.jpg" alt="Logo">
+            </a>
+        </h3>
+
+        <div class="other-links">
+            <a href="archives" id="pages-links">Archives</a>
+            <a href="contactUs" id="pages-links">ContactUS</a>
+            <a href="new" id="pages-links">NewBlog</a>
+            <a href="signIn" id="pages-links">SignIn</a>
+        </div>
+
+  
+    </nav>
+
+    <div class="container"  style="padding-top: 60px;">
+
+        <center>
+
+        <h1><%= title %></h1>
+        <h4>Please do <%= title %></h4>
+        <h4>Sign up once you'll read and edit our articles, Join the team!.</h4>
+        </center>
+
+        <div class="row">
+           <form  style="padding: 90px;" method="POST" action="/signIn">
+
+            <div class="input-group" style="padding-bottom: 17px;"> 
+                <span class="input-group-addon" id="basic-addon1"><i class="fas fa-user"></i></span>
+                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1"required="required"
+                name="username" >
+            </div>
+            <div class="input-group"  style="padding-bottom: 17px;">
+                <span class="input-group-addon" id="basic-addon1"><i class="fas fa-at"></i></span>
+                <input type="email" class="form-control" placeholder="E-mail" aria-describedby="basic-addon1" required="required" name="Email">
+            </div>
+            <div class="input-group"  style="padding-bottom: 17px">
+                <span class="input-group-addon" id="basic-addon1"><i class="fas fa-unlock-alt"></i></span>
+                <input type="password" class="form-control" placeholder="password" aria-describedby="basic-addon1" required="required" name="password">
+            </div>
+
+            <button type="submit" class="btn btn-success" style="margin-left: 45%; padding: 13px;">
+                <i class="fa fa-user-plus"></i> Register</button>
+
+           </form>
+           
+          
+        </div>
+
+    </div>
+
+</body>
+
+</html>

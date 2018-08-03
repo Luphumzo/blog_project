@@ -1,9 +1,7 @@
 body {
-  background-image: url(../images/marc-kleen-641771-unsplash.jpg);
+  background-image: url("../images/kyle-glenn-598701-unsplash.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; }
+  background-size: cover; }
 
 .navbar {
   padding: 0% !important;
@@ -34,16 +32,25 @@ body {
 
 .logIn {
   width: 7%;
+  height: 50%;
   line-height: 2px !important;
   background-color: #c97b12 !important;
   padding: 0% !important;
+  margin: 0% !important;
   position: absolute;
-  left: 90%; }
+  left: 90%;
+  bottom: 30%;
+  border: 0px;
+  border-radius: 7%;
+  font-size: 16px; }
+  .logIn:hover {
+    background-color: #eda13a !important; }
   .logIn img {
     position: relative;
-    right: 45%;
-    top: 10px;
-    width: 17px; }
+    right: 30%;
+    top: 1px;
+    width: 20px;
+    padding: 0% !important; }
 
 .jumbotron {
   background-image: url(../images/b-world.jpg);
@@ -55,10 +62,7 @@ body {
 .card {
   background-color: #ffa429 !important; }
 
-.btn {
-  border: 0px; }
-
-h1, h5 {
+h1, h4 {
   color: #ffa429 !important; }
 
 .archives-jumbotron {

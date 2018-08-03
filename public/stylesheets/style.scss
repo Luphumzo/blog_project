@@ -1,9 +1,8 @@
 body{
-    background-image: url(../images/marc-kleen-641771-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+//   background-color: #EDF4ED!important;
+background-image: url("../images/kyle-glenn-598701-unsplash.jpg");
+background-repeat: no-repeat;
+background-size: cover;
 }
 
 .navbar{
@@ -11,27 +10,26 @@ body{
     position: fixed !important;
     width: 100%;
     top: 0%;
-
     z-index: 1;
 
     #home-links{
-        color: whitesmoke;
-        cursor: pointer;
+    color: whitesmoke;
+    cursor: pointer;
 
-        &:hover{
-        color: whitesmoke;
-        text-decoration: none;            
-        }
+    &:hover{
+    color: whitesmoke;
+    text-decoration: none;            
+    }
     }
     img{
-        width: 6%;
-        margin-left: 10px;
+    width: 6%;
+    margin-left: 10px;
     }
 
     .other-links{
-        position: relative;
-        right: 30%;
-        padding: 0% !important ;
+    position: relative;
+    right: 30%;
+    padding: 0% !important ;
     }
 
     #pages-links{
@@ -40,27 +38,38 @@ body{
     margin-left: 6px;
    
 
-      &:hover{
-        color: whitesmoke !important;
-        text-decoration: none;            
-        }
+    &:hover{
+    color: whitesmoke !important;
+    text-decoration: none;            
+    }
     }
 }
 
 .logIn{
    width: 7%;
+   height: 50%;
    line-height: 2px !important;
    background-color:#c97b12 !important; 
    padding: 0% !important ;
+   margin: 0% !important;
    position: absolute;
    left: 90%;
+   bottom:30%;
+   border: 0px;
+   border-radius: 7%;
+   font-size: 16px;
+
+   &:hover{
+       background-color: #eda13a !important;
+   }
 
     img{
     position: relative;
-    right: 45%;
-    top: 10px;
-    width: 17px;
-    }
+    right: 30%;
+    top: 1px;
+    width: 20px;
+    padding: 0% !important ;
+ }
 }
 
 .jumbotron{
@@ -74,10 +83,17 @@ body{
 .card{
    background-color: #ffa429 !important;
 }
-.btn{
-    border: 0px;
-}
-h1 ,h5{
+// .btn{
+//     border: 0px;
+//     background-color: #343a40 !important;
+//     border-color:#343a40 !important;
+
+//     &:hover{
+//     background-color: gray !important;
+        
+//     }
+// }
+h1 ,h4{
     color: #ffa429 !important;
 }
 ///////////////// New Posts /////////////////////
@@ -103,17 +119,18 @@ h1 ,h5{
  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXqGI_4QDAYNE-JEI549HvFkVy4cALn4wJ2SuzJ-IpKH24ZwxGoA");
 }
 .blogs-card{
-    width: 100% !important;
-   background-color: #343a40 !important;
-   color: whitesmoke;
+width: 100% !important;
+background-color: #343a40 !important;
+color: whitesmoke;
     
-   .delete-btn{
+.delete-btn{
     background-color: red;
     border: 0px;
 
-        &:hover{
-            background-color:orangered;
-            border: 6px red;
-        }
+    &:hover{
+    background-color:orangered;
+    border: 6px red;
+     
+    }
    }
 }
